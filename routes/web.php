@@ -29,9 +29,23 @@ Route::get('/', function () {
     });*/
     Route::get('/hello','WelcomeController@hello');
     Route::get('/about', 'AboutController@about');
-    Route::get('/home', 'HomeController@home');
-    Route::get('/home/{page}', 'HomeController@home2');
+    //Route::get('/home', 'HomeController@home');
+    //Route::get('/home/{page}', 'HomeController@home2');
     Route::get('/articles/{id}', 'ArticleController');
     Route::get('/homebs', 'HomeController@homebs');
     Route::get('/homecc', 'HomeController@homecc');
     Route::get('/postbs', 'ArticleController@postbs');
+    Route::get('/homequiz','HomeController@homequiz' );
+    Route::get('/gallery','galleryController@gallery' );
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/logout' ,function(){
+	$logout=Auth::logout();
+	return view('auth.login');
+});
+Route::get('/' ,function(){
+	return view('auth.login');
+});

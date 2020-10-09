@@ -21,7 +21,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Bismillah') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -41,7 +41,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">InshaAllah Barokah masuk web ini</a>
+      <a class="navbar-brand" href="#">Selamat Datang dan Selamat Menuntut Ilmu</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
       data-target="#navbarResponsive" aria-controls="navbarResponsive" 
       aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/homecc">Beranda kami
+            <a class="nav-link" href="/homequiz">Beranda kami
               <span class="sr-only">(current)</span>
             </a>
           </li>
