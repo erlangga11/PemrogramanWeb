@@ -30,4 +30,12 @@ class HomeController extends Controller
             return \App\Article::all();
         });
     }
+    public function homecc(){
+        $articleAll=Article::all();
+        $adticle=json_decode(json_encode($articleAll));
+        return view ('home')->with(compact('articleAll'));
+        $value = Cache::rememberForever('article',function(){
+            return \App\Article::all();
+        });
+    }
 }

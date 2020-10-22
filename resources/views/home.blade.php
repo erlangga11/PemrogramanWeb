@@ -12,7 +12,9 @@
     <h1 class="my-4">Bismillah ini bisa <br>
       <small>Yuk Teman-teman Kita Hijrah</small>
     </h1>
-
+    <div class = "card">
+    <a href="articles/add" class="btn btn-primary" size>Tambah Data</a>
+    </div>
     <!-- Blog Post -->
     @foreach($articleAll as $art)
     <!-- Blog Post -->
@@ -22,6 +24,9 @@
         <h2 class="card-title">{{$art->title}}</h2>
         <p class="card-text">{{ Str::limit($art->content, 100,'...') }}</p>
         <a href="{{ '/articles/'.$art->id }}" class="btn btn-primary">Gali Lebih Dalam &rarr;</a>
+        <a href="article/edit/{{ $art->id }}" class="badge badgewarning">Edit</a>
+        <a href="article/delete/{{ $art->id }}" class="btn btn-primary">Hapus&rarr;</a>
+
       </div>
       <div class="card-footer text-muted">
         Posted on January 1, 2020 by

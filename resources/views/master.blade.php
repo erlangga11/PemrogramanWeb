@@ -7,7 +7,7 @@
   initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Blog Post - Start Bootstrap Template</title>
+  <title>Erlangga Blog</title>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -50,7 +50,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/homequiz">Beranda kami
+            <a class="nav-link" href="/home">Beranda kami
               <span class="sr-only">(current)</span>
             </a>
           </li>

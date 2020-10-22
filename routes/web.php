@@ -49,3 +49,12 @@ Route::get('/logout' ,function(){
 Route::get('/' ,function(){
 	return view('auth.login');
 });
+Route::get('/manage', 'ArticleController@index')->name('manage');
+Route::get('/article/add','ArticleController@add');
+Route::post('/article/create','ArticleController@create');
+
+Route::get('/article/edit/{id}','ArticleController@edit');
+Route::post('/article/update/{id}','ArticleController@update');
+
+Route::get('/article/delete/{id}','ArticleController@delete');
+
