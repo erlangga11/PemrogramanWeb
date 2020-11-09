@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Article;
 class galleryController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
     public function gallery(){
         $articleAll=Article::all();
         $adticle=json_decode(json_encode($articleAll));

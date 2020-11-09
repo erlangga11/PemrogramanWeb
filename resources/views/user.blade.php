@@ -13,24 +13,38 @@
       <small>Yuk Teman-teman Kita Hijrah</small>
     </h1>
     <div class = "card">
-    <a href="article/add" class="btn btn-primary" size>Tambah Data</a>
+    <a href="homecc" class="btn btn-primary" size>Manage Article</a>
     </div>
     <!-- Blog Post -->
-    @foreach($articleAll as $art)
+    
     <!-- Blog Post -->
-    <div class="card mb-4">
-    <img class="card-img-top" src={{$art->featured_image}} alt="Card image cap">
-      <div class="card-body">
-        <h2 class="card-title">{{$art->title}}</h2>
-        <p class="card-text">{{ Str::limit($art->content, 100,'...') }}</p>
-        <a href="{{ '/articles/'.$art->id }}" class="btn btn-primary">Gali Lebih Dalam &rarr;</a>
-        <a href="article/edit/{{ $art->id }}" class="badge badgewarning">Edit</a>
-        <a href="article/delete/{{ $art->id }}" class="btn btn-primary">Hapus&rarr;</a>
-
+    <table class="table table-bordered table-striped" >
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nama</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach($users as $u)
+    <tr>
+        <td>{{$u->id}}</td>
+        <td>{{$u->name}}</td>
+        <td>{{$u->email}}</td>
+        <td>
+        <a href="{{ '/user/edit/'.$u->id }}" class="btn btn-primary">Edit &rarr;</a>
+        <a href="/user/delete/{{ $u->id }}" class="btn btn-primary">Hapus&rarr;</a>
+        </td>
+    </tr>
+    @endforeach
+    </tbody>
+    </table>
+      <div class="card-footer text-muted">
+        Posted on January 1, 2020 by
+        <a href="#">Start Bootstrap</a>
       </div>
     </div>
-    @endforeach
-
 
     <!-- Pagination -->
     <ul class="pagination justify-content-center mb-4">
@@ -49,10 +63,15 @@
 
     <!-- Search Widget -->
     <div class="card my-4">
-      <h5 class="card-header">User manage</h5>
-        <div class = "card">
-    <a href="user" class="btn btn-primary" size>Ubah data User</a>
-    </div>
+      <h5 class="card-header">Search</h5>
+      <div class="card-body">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-append">
+            <button class="btn btn-secondary" type="button">Go!</button>
+          </span>
+        </div>
+      </div>
     </div>
 
     <!-- Categories Widget -->

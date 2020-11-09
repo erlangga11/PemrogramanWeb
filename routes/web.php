@@ -33,15 +33,13 @@ Route::get('/', function () {
     //Route::get('/home/{page}', 'HomeController@home2');
     Route::get('/articles/{id}', 'ArticleController');
     Route::get('/homebs', 'HomeController@homebs');
-    Route::get('/homecc', 'HomeController@homecc');
+    Route::get('/homecc', 'HomeController@homecc')->name ('homecc');
     Route::get('/postbs', 'ArticleController@postbs');
     Route::get('/homequiz','HomeController@homequiz' );
     Route::get('/gallery','galleryController@gallery' );
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/home', 'HomeController@homequiz')->name('home');
 Route::get('/logout' ,function(){
 	$logout=Auth::logout();
 	return view('auth.login');
@@ -52,9 +50,12 @@ Route::get('/' ,function(){
 Route::get('/manage', 'ArticleController@index')->name('manage');
 Route::get('/article/add','ArticleController@add');
 Route::post('/article/create','ArticleController@create');
-
 Route::get('/article/edit/{id}','ArticleController@edit');
 Route::post('/article/update/{id}','ArticleController@update');
-
 Route::get('/article/delete/{id}','ArticleController@delete');
+
+Route::get('/user','UserController@index');
+Route::get('/user/edit/{id}','UserController@edit');
+Route::post('/user/update/{id}','UserController@update');
+Route::get('/user/delete/{id}','UserController@delete');
 

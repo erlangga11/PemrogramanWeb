@@ -50,10 +50,14 @@
                   <div class="row full-height align-items-center">
                     <div class="col-md-12 justify-content-center">
                       <ul class="list-unstyled menu">
-                        <li class="active"><a href="index.html" class="animsition-link">Home</a></li>
-                        <li><a href="/about" class="animsition-link">About Us</a></li>
-                        <li><a href="/gallery" class="animsition-link">Gallery</a></li>
-                        <li><a href="/homecc" class="animsition-link">Tampilan Blog</a></li>
+                        @can('user-display')
+                        <li class="active"><a href="/home" class="animsition-link">Home</a></li>
+                        <li class="hover"><a href="/about" class="animsition-link">About Us</a></li>
+                        <li class="hover"><a href="/gallery" class="animsition-link">Gallery</a></li>
+                        @endcan
+                        @can('manage-articles')
+                        <li class="hover"><a href="/homecc" class="animsition-link"> Tampilan Blog</a></li>
+                        @endcan
                         <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

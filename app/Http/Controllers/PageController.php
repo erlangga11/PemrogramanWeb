@@ -13,6 +13,4 @@ class PageController extends Controller
     	return 'Erlangga Natanegara <br>
     			1931710134';
     }
-    
-
     }
