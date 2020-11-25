@@ -56,7 +56,7 @@
             <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
             @foreach($articleAll as $art)
               <div class="slider-item">
-                <img src={{$art->featured_image}} alt="Image placeholder" class="img-fluid">
+                <img src="{{asset('storage/'.$art->featured_image)}}" alt="Image placeholder" class="img-fluid">
               </div>
             @endforeach
             </div>
@@ -80,7 +80,7 @@
         @foreach($articleAll as $art)
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
             <div class="media media-custom d-block mb-4">
-              <a href="#" class="mb-4 d-block"><img src={{$art->featured_image}} alt="Image placeholder" class="img-fluid"></a>
+              <a href="#" class="mb-4 d-block"><img src="{{asset('storage/'.$art->featured_image)}}" alt="Image placeholder" class="img-fluid"></a>
               <div class="media-body">
                 <span class="meta-post">February 26, 2018</span>
                 <h2 class="mt-0 mb-3"><a href="{{ '/articles/'.$art->id }}">{{$art->title}}</a></h2>

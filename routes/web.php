@@ -53,9 +53,12 @@ Route::post('/article/create','ArticleController@create');
 Route::get('/article/edit/{id}','ArticleController@edit');
 Route::post('/article/update/{id}','ArticleController@update');
 Route::get('/article/delete/{id}','ArticleController@delete');
+Route::get('/article/cetak_pdf', 'ArticleController@cetak_pdf');
 
 Route::get('/user','UserController@index');
 Route::get('/user/edit/{id}','UserController@edit');
 Route::post('/user/update/{id}','UserController@update');
 Route::get('/user/delete/{id}','UserController@delete');
+Route::get('/user/cetak_pdf', 'UserController@cetak_pdf');
+
 

@@ -24,13 +24,13 @@
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 1, 2019 at 12:00 PM</p>
+        <p>Posted on {{$articles->created_at}}</p>
 
         <hr>
 
         <!-- Preview Image -->
         <p class="lead"> Bismillahirahmanirrahim</p>
-        <img class="card-img-top" src={{$articles->featured_image}} alt="Card image cap">
+        <img class="card-img-top" src="{{asset('storage/'.$articles->featured_image)}}" alt="Card image cap">
         
         
         <hr>

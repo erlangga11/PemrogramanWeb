@@ -1,6 +1,6 @@
 @extends('master')
   @section('content')
-<form action="/article/create" method="post">
+  <form action="/article/create" method="post" enctype="multipart/form-data">
  @csrf
  <div class="form-group">
  <br><br>
@@ -15,8 +15,7 @@ required="required" name="content"></br>
  </div>
  <div class="form-group">
  <label for="image">Feature Image</label>
- <input type="text" class="form-control"
-required="required" name="image"></br>
+ <input type="file" class="form-control" required="required" name="image"></br>
  </div>
  <button type="submit" name="add" class="btn btn-primary float-right">Tambah Data</button>
  </form>
