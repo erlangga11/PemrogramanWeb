@@ -24,7 +24,7 @@
         <div class="row">
         @foreach($articleAll as $art)
           <div class="col-md-6 col-lg-3 mb-4">
-            <a href={{$art->featured_image}} data-fancybox="gallery"><img src={{$art->featured_image}} alt="Image" class="img-fluid"></a>
+            <a href={{$art->featured_image}} data-fancybox="gallery"><img src="{{asset('storage/'.$art->featured_image)}}" alt="Image" class="img-fluid"></a>
           </div>
           @endforeach
          

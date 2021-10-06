@@ -12,14 +12,14 @@ class ArticleController extends Controller
     public function postbs (){
         return view('postbs');
     }*/
-    public function __construct()
+    /*public function __construct()
     {
-    //$this->middleware('auth');
+    $this->middleware('auth');
     $this->middleware(function($request, $next){
     if(Gate::allows('manage-articles')) return $next($request);
     abort(403, 'Anda tidak memiliki cukup hak akses');
     });
-    }
+    }*/
 
     public function __invoke($id){
         $articles = \App\Article::find($id);
